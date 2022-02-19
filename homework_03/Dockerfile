@@ -1,10 +1,13 @@
-FROM python:3.10.2-slim-buster
+# docker run --name HomeWork_03 -p 8000:8000 blogapp
+
+FROM python:3.9.9-buster
+#FROM python:3.10.2-slim-buster
 
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-RUN pip install poetry
+RUN pip3 install poetry==1.1.12
 RUN poetry config virtualenvs.create false
 
 COPY ./pyproject.toml ./pyproject.toml
