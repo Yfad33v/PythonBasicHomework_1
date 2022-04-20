@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My_Shop</title>
+    <style>
+        body {
+           background-color: lightgray;
+            font-style: italic;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 100px
+        }
+        form {
+            background-color: lightblue;
+            margin: 1px;
+        }
+        footer {
+            text-align: left;
+            margin-top: 400px;
+        }
+    </style>
+
+</head>
+    <form>
+    <h1> Приветствуем вас на странице нашего магазина! </h1>
+    <hr>
+    </form>
+
+<body>
+
+<h2> Ниже представлены наши основные товары: </h2>
+<ul>
+    {% for el in group_all %}
+        <li>
+               <a href="{% url 'article_detail' el.pk %}" >
+                   {{ el }}
+               </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<footer> created at 2022 </footer>
+
+</body>
+</html>

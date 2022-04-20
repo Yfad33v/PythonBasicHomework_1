@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары</title>
+    <style>
+        body {
+           background-color: lightgray;
+            font-style: italic;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 100px
+        }
+        form {
+            background-color: lightblue;
+            margin: 1px;
+        }
+        footer {
+            text-align: left;
+            margin-top: 400px;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+            background-color: aliceblue;
+            margin-top: 80px;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+
+</head>
+<body>
+    <u>
+            <li><a href="{% url 'main' %}" > Назад к каталогу </a> </li>
+    </u>
+
+
+        <table>
+          <tr>
+            <th>Товар</th>
+          </tr>
+          <tr>
+            <td> {{ object }} </td>
+          </tr>
+        </table>
+</body>
+</html>
